@@ -19,7 +19,6 @@ function App() {
           <Route exact path = "/" element = {<Home/>} />
           <Route exact path = "/resumeform" element = {<ResumeForm />}/>
           <Route exact path = "/contact" element = {<Contact/>}/>
-          <Route exact path = "/registration" element = {<Register/>}/>
         </Routes>
       </Router>
     </div>
