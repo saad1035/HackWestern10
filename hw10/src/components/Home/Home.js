@@ -13,6 +13,9 @@ const HomePage = () => {
             <li>
               <Link to="/resumeform">Resume Form</Link>
             </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
             {/* Add more navigation links as needed */}
           </ul>
         </nav>
