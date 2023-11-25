@@ -17,7 +17,7 @@ const HomePage = () => {
               <Link to="/contact">Contact</Link>
             </li>
             <li>
-              <Link to="/register">Register</Link>
+              <Link to="/registration">Register</Link>
             </li>
             {/* Add more navigation links as needed */}
           </ul>
