@@ -41,7 +41,27 @@ const HomePage = () => {
             <p class = "title">Customizable</p>
             <p>Easily modify the content within each section to highlight specific achievements, skills, or experience relevant to different job applications. </p>
           </div>
+
+          <div class = "reason">
+            <p class = "title">How we built it</p>
+            <p>We built the entire app using React, Javascript, CSS and HTML. </p>
+          </div>
+
+          <div class = " challenges">
+            <p class = "title">Challenges we faces</p>
+            <p>-Learning react with vscode and how to implement different APIs</p>
+            <p>-Making a resume form which would save the information</p>
+            <p>-Minimize code conflicts and assigning tasks that would be feasible for everyone</p>
+          </div>
         
+        <div class = "Build">
+          <p class = "title">Made with</p>
+          <p>CSS</p>
+          <p>HTML</p>
+          <p>Javascript</p>
+          <p>React</p>
+        </div>
+
           <div class = "footer">
           <p>2023 My Website. All rights reserved.</p>
           </div>
