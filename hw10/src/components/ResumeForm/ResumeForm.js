@@ -9,7 +9,18 @@ function ResumeForm() {
     email: '',
     phone: '',
     address: '',
-    // Add more fields as needed
+    positionTitle: '',
+    companyName: '',
+    startDateWork: '',
+    endDateWork: '',
+    workSummary: '',
+    schoolName: '',
+    schoolLocation: '',
+    startDateSch: '',
+    endDateSch: '',
+    degree: '',
+    skill: '',
+    summary: ''
   });
 
   const navigate = useNavigate();
@@ -19,19 +30,18 @@ function ResumeForm() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Process the form data or generate the resume here
-    // For simplicity, we'll just navigate to another page
-    navigate('/resume', { state: { formData } });
-  };
+// Inside handleSubmit in ResumeForm.js
+const handleSubmit = (e) => {
+  e.preventDefault();
+  console.log('Form Data:', formData); // Log the form data
+  // Process the form data or generate the resume here
+  navigate('/resume', { state: { formData } });
+};
 
   return (
     <div>
       <h1>Resume Form</h1>
-      <h1>Personal Details</h1>
       <form onSubmit={handleSubmit}>
-        {/* Add input fields for each piece of information */}
         <label>
           First Name:
           <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} />
