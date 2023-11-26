@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
+
+.active{
+    color: white;
+}
+nav {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* This will be the reference for the absolute positioning of the logo */
+    mix-blend-mode: multiply;
+    font-family: 'Roboto Slab', serif;
+}
+nav img {
+    background: transparent;
+    height: auto; /* Keep the aspect ratio */
+    width: 200px; /* Or whatever width you prefer */
+    position: absolute; /* Take it out of the document flow */
+    top: 50%; /* Center it vertically */
+    transform: translateY(-50%); /* Align the center of the logo with the navbar center */
+    left: 10px; /* Adjust as necessary to position the logo inside the navbar */
+    margin-right: 10px;
+    z-index: 10; 
+}
+
+nav .title, nav ul li a {
+    padding: 0.5rem; /* Adjust this value as necessary */
+    margin: 0; /* Adjust or remove margin */
+}
+
+nav .title {
+    font-size: 1.5rem;
+    margin: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #a2d2ff;
+    font-family: 'Roboto Slab', serif; /* Add this line */
+}
+
+nav ul {
+    padding-left: 1000px; /* Adjust so there's space for the logo */
+    margin: 0;
+    display: flex;
+    list-style: none;
+}
+
+
+nav ul li {
+   list-style: none; 
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+}
+
+nav ul li a:not(.active):hover {
+    background-color:#cdb4db ;
+}
+
+nav .menu {
+    display: none;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+}
+
+nav .menu span {
+    height: 0.4rem;
+    width: 100%;
+    background-color: #cdb4db;
+    border-radius: 0.2rem;
+}
+nav ul li a {
+    margin: 0.2rem 0.5rem;
+}
+.create-resume-btn {
+    background-color: #7209b7;/* Ensure this ends with a semicolon */
+    color: white !important;
+    padding: 10px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    width: 115px; /* Or any other fixed width */
+    display: inline-block; /* or 'block' depending on your layout */
+    text-align: center; /* To keep the text centered */
+}
+
+@media (max-width: 480px) {
+    nav .menu {
+        display: flex;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 0.25rem;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+
+}

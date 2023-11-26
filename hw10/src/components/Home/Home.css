@@ -78,6 +78,10 @@ button.purple-button:hover {
 
 /* Footer Styles */
 footer {
+    position: fixed;
+    left:0;
+    bottom:0;
+    width:100%;
     margin-top: 20px;
     text-align: center; /* Align the text to the left in the footer */
     color: #666; /* Gray text color for the footer */

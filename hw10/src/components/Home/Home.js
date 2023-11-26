@@ -4,8 +4,12 @@ import './Home.css';
 
 const HomePage = () => {
     return (
+<<<<<<< HEAD
+      <div className = "container">
+=======
       <div>
       
+>>>>>>> 054cf65d83b8ea4b03b29aed530497c8dafc21f6
         {/* Navigation Bar */}
         <nav>
           <ul>
@@ -24,7 +28,11 @@ const HomePage = () => {
         
   
         {/* Main Content Area */}
+<<<<<<< HEAD
         <div>
+=======
+        <div class = "intro">
+>>>>>>> 054cf65d83b8ea4b03b29aed530497c8dafc21f6
           <h1 className = "title">Resumade Easy</h1>
           <p className = "body-text">
           Welcome to Resumade Easy, where crafting the perfect resume is as effortless as a stroll in the park. 
@@ -40,6 +48,15 @@ const HomePage = () => {
           <Link to="/ResumeForm">
             <button className = "purple-button">Go to Resume Form</button>
           </Link>
+<<<<<<< HEAD
+        </div>
+  
+        {/* Footer */}
+        <footer>
+          <p>&copy; 2023 Resumade Easy. All rights reserved.</p>
+        </footer>
+      </div>
+=======
           </div>
 
           <div class = "fast">
@@ -64,6 +81,7 @@ const HomePage = () => {
           <p>2023 My Website. All rights reserved.</p>
           </div>
        </div>
+>>>>>>> 054cf65d83b8ea4b03b29aed530497c8dafc21f6
     );
   };
 
