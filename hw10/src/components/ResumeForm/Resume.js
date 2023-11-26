@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useReactToPrint } from 'react-to-print';
 import jsPDF from 'jspdf';
@@ -35,18 +36,35 @@ const ResumeToPrint = ({ formData }) => {
       pdf.addImage(imgData, 'PNG', 0, 0);
       pdf.save('resume.pdf');
     }
+=======
+import React from 'react';
+import ResumeForm from './ResumeForm';
+
+const AnotherFile = ({formData}) => {
+  // Define a function to handle form submission in AnotherFile.js
+  const handleFormSubmit = (formData) => {
+    // Process or output the form data as needed
+    console.log('Form Data:', formData);
+    // Add your logic here, for example, sending the data to an API, storing it in state, etc.
+>>>>>>> 054cf65d83b8ea4b03b29aed530497c8dafc21f6
   };
 
   return (
     <div>
+<<<<<<< HEAD
       <h1>Your Resume (Printable Version)</h1>
       <ResumeContent ref={componentRef} formData={formData} />
       <button onClick={handlePrint}>Print Resume</button>
       <button onClick={handleDownloadPDF}>Download PDF</button>
+=======
+      <h1>Another File</h1>
+      {/* Render ResumeForm and pass the handleFormSubmit function as a prop */}
+>>>>>>> 054cf65d83b8ea4b03b29aed530497c8dafc21f6
     </div>
   );
 };
 
+<<<<<<< HEAD
 const ResumeContent = React.forwardRef(({ formData }, ref) => {
   return (
     <div ref={ref}>
@@ -60,3 +78,6 @@ const ResumeContent = React.forwardRef(({ formData }, ref) => {
 });
 
 export default Resume;
+=======
+export default AnotherFile;
+>>>>>>> 054cf65d83b8ea4b03b29aed530497c8dafc21f6
