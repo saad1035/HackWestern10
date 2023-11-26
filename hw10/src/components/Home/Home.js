@@ -21,7 +21,7 @@ const HomePage = () => {
         </nav>
   
         {/* Main Content Area */}
-        <div>
+        <div class = "header">
           <h1>Welcome to My Website</h1>
           <p>This is a simple home page template in React.</p>
   
