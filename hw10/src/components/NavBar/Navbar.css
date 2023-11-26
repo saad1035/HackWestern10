@@ -5,7 +5,7 @@
 }
 nav {
     padding: 10px 20px;
-    display: flex;
+    display: block;
     justify-content: space-between;
     align-items: center;
     position: relative; /* This will be the reference for the absolute positioning of the logo */
@@ -22,6 +22,7 @@ nav img {
     left: 10px; /* Adjust as necessary to position the logo inside the navbar */
     margin-right: 10px;
     z-index: 10; 
+    flex-grow: 1; 
 }
 
 nav .title, nav ul li a {
@@ -43,6 +44,7 @@ nav ul {
     margin: 0;
     display: flex;
     list-style: none;
+    justify-content: flex-end; 
 }
 
 

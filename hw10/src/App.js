@@ -23,7 +23,7 @@ function App() {
           <Route path="/resumeform" element={<ResumeForm />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Navigate to="/home" />} />
-          <Route exact path = "/resume" element = {<Resume/>}/>
+          <Route path = "/resume" element = {<ResumeForm/>}/>
         </Routes>
       </Router>
     </div>

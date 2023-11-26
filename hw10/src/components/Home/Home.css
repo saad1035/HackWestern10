@@ -1,7 +1,27 @@
+.scroll-button {
+    /* Your button styles */
+    cursor: pointer;
+    /* Add additional styling as per your design */
+  }
+  @keyframes slideInFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .title {
+    animation: slideInFromLeft 2s ease-out forwards;
+  }
 body {
     font-family: 'PT Serif', serif;
     margin: 0;
     padding: 0;
+    justify-content: space-between;
     background-color: #fff; /* White background */
     color: #000; /* Black text color */
 }
@@ -15,13 +35,16 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
-
-/* Navigation Bar Styles */
-nav {
-    background-color: #6a1b9a; /* Purple background color for the navigation bar */
-    width: 100%; /* Take full width of the container */
+.content-box {
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    border-radius: 8px; /* Optional: for rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: for a subtle shadow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 175px;
+    margin-top: -400px /* Add some space around the content box */
 }
-
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -41,19 +64,22 @@ nav a {
     transition: color 0.3s ease; /* Smooth transition for text color */
 }
 
-nav a:hover {
-    color: #4b116d; /* Darker purple on hover */
-}
-
 /* Main Content Area Styles */
 main {
     text-align: left;
 }
 
-h1.title {
-    color: #6a1b9a; /* Purple text color for the title */
+h1.title{
+    color: black; /* Purple text color for the title */
     font-family: 'Fira Sans Black', sans-serif; /* Fira Sans Black font for the title */
     margin-bottom: 10px; /* Add some margin at the bottom for spacing */
+    font-size: 50px;
+    margin-left: -80px;
+}
+
+.subheadline {
+    font-size: 15px;
+    margin-left: -80px;
 }
 
 p.body-text {
@@ -65,11 +91,13 @@ p.body-text {
 button.purple-button {
     background-color: #6a1b9a; /* Purple background color */
     color: #fff; /* White text color */
-    padding: 10px 15px; /* Adjust padding as needed */
+    padding: 20px 30px; /* Adjust padding as needed */
     border: none;
     border-radius: 5px; /* Add some border radius for a rounded look */
     cursor: pointer;
+    font-size: 14px;
     transition: background-color 0.3s ease; /* Smooth transition for background color */
+    margin-left: -80px;
 }
 
 button.purple-button:hover {
@@ -81,4 +109,106 @@ footer {
     margin-top: 20px;
     text-align: center; /* Align the text to the left in the footer */
     color: #666; /* Gray text color for the footer */
+}
+
+
+/* Add responsive design for smaller screens */
+@media (max-width: 768px) {
+    .features-container {
+        flex-direction: column; /* Stack the boxes vertically on small screens */
+    }
+    
+    .feature-box {
+        max-width: 100%; /* Boxes should take full width on small screens */
+        margin-bottom: 20px; /* Add space between vertically stacked boxes */
+    }
+}
+/* Home.css */
+.home-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.split-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-section {
+    flex: 1;
+
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+}
+
+.benefits-list li {
+    padding: 5px 0;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+}
+
+.primary {
+    background-color: #22a7f0;
+    color: white;
+}
+
+.secondary {
+    background-color: transparent;
+    color: #22a7f0;
+    border: 2px solid #22a7f0;
+}
+
+.image-section {
+    flex: 1;
+    text-align: right;
+}
+
+.resume-image {
+    max-width: 120%;
+    height: auto;
+    padding: 30px;
+
+}
+
+@media (max-width: 768px) {
+    .split-layout {
+        flex-direction: column;
+    }
+
+    .image-section {
+        text-align: center;
+        order: -1; /* Image appears above the text */
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+}
+.content-box {
+    background-color: #fff; /* Background color for the content box */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow for the content box */
+    /* Other styles... */
+    margin: 0 auto; /* Center the box */
+    margin-bottom: 30px; /* Add space below the content box */
 }
