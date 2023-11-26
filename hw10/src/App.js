@@ -5,6 +5,7 @@ import Home from './components/Home/Home';
 import Contact from './components/Contact/Contact';
 import Createresume from './components/Createresume/Createresume';
 import NavBar from './components/NavBar/NavBar';
+import Resume from './components/ResumeForm/Resume';
 
 import {
   BrowserRouter as Router,

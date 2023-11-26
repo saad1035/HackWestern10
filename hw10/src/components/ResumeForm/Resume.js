@@ -1,5 +1,5 @@
 import React from 'react';
-import ResumeForm from './ResumeForm';
+import ResumeForm from './ResumeForm.js';
 
 const AnotherFile = ({formData}) => {
   // Define a function to handle form submission in AnotherFile.js
@@ -12,8 +12,10 @@ const AnotherFile = ({formData}) => {
   return (
     <div>
       <h1>Another File</h1>
-      {/* Render ResumeForm and pass the handleFormSubmit function as a prop */}
-    </div>
+      <div>
+      {/* Pass the callback function to the ResumeForm component */}
+      <ResumeForm onFormSubmit={handleFormSubmit} />
+    </div>    </div>
   );
 };
 
