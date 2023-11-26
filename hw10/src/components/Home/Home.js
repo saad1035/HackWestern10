@@ -4,8 +4,12 @@ import './Home.css';
 
 const HomePage = () => {
     return (
+<<<<<<< HEAD
+      <div className = "container">
+=======
       <div>
       
+>>>>>>> 8d0c373cb504e19c1970839ea53318d28862759c
         {/* Navigation Bar */}
         <nav>
           <ul>
@@ -24,6 +28,20 @@ const HomePage = () => {
         
   
         {/* Main Content Area */}
+<<<<<<< HEAD
+        <div>
+          <h1 className = "title">Resumade Easy</h1>
+          <p className = "body-text">
+          Welcome to Resumade Easy, where crafting the perfect resume is as effortless as a stroll in the park. 
+          Our mission is simple: empower you to showcase your skills and experiences with a resume that not only 
+          speaks volumes but also stands out in the crowd. Imagine a world where creating a professional resume 
+          is as friendly as our mascot, the Resumonster, guiding you through the process. At Resumade Easy, we 
+          believe that everyone deserves a resume that reflects their unique journey and aspirations. Get ready 
+          to embark on a seamless adventure of resume-building – because landing your dream job should be a walk 
+          in the park, not a maze of complications. Let's make your professional story roar with Resumade Easy!
+          </p>
+  
+=======
         <div class = "header">
           <h1>Welcome to My Website</h1>
           <p>This is a simple home page template in React.</p>
@@ -31,10 +49,20 @@ const HomePage = () => {
 
 
           <div class = "intro">
+>>>>>>> 8d0c373cb504e19c1970839ea53318d28862759c
           {/* Example Button to Route to Resume Form */}
           <Link to="/ResumeForm">
-            <button>Go to Resume Form</button>
+            <button className = "purple-button">Go to Resume Form</button>
           </Link>
+<<<<<<< HEAD
+        </div>
+  
+        {/* Footer */}
+        <footer>
+          <p>&copy; 2023 Resumade Easy. All rights reserved.</p>
+        </footer>
+      </div>
+=======
           </div>
 
           <div class = "fast">
@@ -59,6 +87,7 @@ const HomePage = () => {
           <p>2023 My Website. All rights reserved.</p>
           </div>
        </div>
+>>>>>>> 8d0c373cb504e19c1970839ea53318d28862759c
     );
   };
 

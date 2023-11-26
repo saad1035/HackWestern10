@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import './components/Home/Home.css';
 import ResumeForm from './components/ResumeForm/ResumeForm';
 import Home from './components/Home/Home';
 import Contact from './components/Contact/Contact';
