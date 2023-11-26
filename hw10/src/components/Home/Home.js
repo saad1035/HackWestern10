@@ -4,7 +4,6 @@ import './Home.css';
 
 const HomePage = () => {
     return (
-      <div className = "container">
       <div>
       
         {/* Navigation Bar */}
@@ -37,24 +36,10 @@ const HomePage = () => {
           in the park, not a maze of complications. Let's make your professional story roar with Resumade Easy!
           </p>
   
-        <div class = "header">
-          <h1>Welcome to My Website</h1>
-          <p>This is a simple home page template in React.</p>
-          </div>
-
-
-          <div class = "intro">
           {/* Example Button to Route to Resume Form */}
           <Link to="/ResumeForm">
             <button className = "purple-button">Go to Resume Form</button>
           </Link>
-        </div>
-  
-        {/* Footer */}
-        <footer>
-          <p>&copy; 2023 Resumade Easy. All rights reserved.</p>
-        </footer>
-      </div>
           </div>
 
           <div class = "fast">
