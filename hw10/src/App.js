@@ -1,4 +1,5 @@
 import './App.css';
+import './components/Home/Home.css';
 import ResumeForm from './components/ResumeForm/ResumeForm';
 import Home from './components/Home/Home';
 import Contact from './components/Contact/Contact';
@@ -22,6 +23,7 @@ function App() {
           <Route path="/resumeform" element={<ResumeForm />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Navigate to="/home" />} />
+          <Route exact path = "/resume" element = {<Resume/>}/>
         </Routes>
       </Router>
     </div>

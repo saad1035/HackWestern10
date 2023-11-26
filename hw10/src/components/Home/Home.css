@@ -1,0 +1,84 @@
+body {
+    font-family: 'PT Serif', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* White background */
+    color: #000; /* Black text color */
+}
+
+/*title- Fira Sans Black  body -PT Serif*/
+.container {
+    display: auto;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navigation Bar Styles */
+nav {
+    background-color: #6a1b9a; /* Purple background color for the navigation bar */
+    width: 100%; /* Take full width of the container */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; /* White text color for navigation links */
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+nav a:hover {
+    color: #4b116d; /* Darker purple on hover */
+}
+
+/* Main Content Area Styles */
+main {
+    text-align: left;
+}
+
+h1.title {
+    color: #6a1b9a; /* Purple text color for the title */
+    font-family: 'Fira Sans Black', sans-serif; /* Fira Sans Black font for the title */
+    margin-bottom: 10px; /* Add some margin at the bottom for spacing */
+}
+
+p.body-text {
+    color: #000; /* Black text color for the body text */
+    line-height: 1.5; /* Increase line height for better readability */
+}
+
+/* Button Style */
+button.purple-button {
+    background-color: #6a1b9a; /* Purple background color */
+    color: #fff; /* White text color */
+    padding: 10px 15px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 5px; /* Add some border radius for a rounded look */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+button.purple-button:hover {
+    background-color: #4b116d; /* Darker purple on hover */
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 20px;
+    text-align: center; /* Align the text to the left in the footer */
+    color: #666; /* Gray text color for the footer */
+}
