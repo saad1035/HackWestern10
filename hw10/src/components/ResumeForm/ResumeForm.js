@@ -1,8 +1,24 @@
 // ResumeForm.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
+import html2pdf from 'html2pdf.js';
 
-  function ResumeForm({onFormSubmit}) {
+
+const ResumePDF = ({ formData }) => {
+  return (
+    <div>
+      <h1>Your Resume</h1>
+      <p>Name: {formData.firstName} {formData.lastName}</p>
+      <p>Email: {formData.email}</p>
+      <p>Phone: {formData.phone}</p>
+      <p>Address: {formData.address}</p>
+      {/* Display other information */}
+    </div>
+  );
+};
+
+
+  function ResumeForm({ onFormSubmit }) {
     const [enteredFirstName, setEnteredFirstName] = useState('');
     const [enteredLastName, setEnteredLastName] = useState('');
     const [enteredEmail, setEnteredEmail] = useState('');
@@ -21,9 +37,13 @@ import { useNavigate } from 'react-router';
     const [enteredSkill, setEnteredSkill] = useState('');
     const [enteredSummary, setEnteredSummary] = useState('');
 
-  // ... other state variables for your form fields
-
-  const [submittedText, setSubmittedText] = useState(null);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  useEffect(() => {
+    if (isSubmitted) {
+      generatePDF();
+      setIsSubmitted(true);
+    }
+  }, [isSubmitted]);
 
   const textChangeHandler = (e) => {
     // Assuming each input field has a name attribute
@@ -79,6 +99,7 @@ import { useNavigate } from 'react-router';
         break;
       case 'summary':
         setEnteredSummary(value);
+       // break;
       default:
         break;
     }
@@ -108,17 +129,46 @@ import { useNavigate } from 'react-router';
       Summary: ${enteredSummary}
     `;
 
-    setSubmittedText(allFormData);
+    setIsSubmitted(allFormData);
     
-    // Optionally, you can pass the form data to a parent component or perform other actions
-    if (onFormSubmit) {
-      onFormSubmit({
-        firstName: enteredFirstName,
-        lastName: enteredLastName,
-        // ... other form fields
-      });
-    }
+ // Optionally, you can pass the form data to a parent component or perform other actions
+ if (onFormSubmit) {
+  onFormSubmit({
+    firstName: enteredFirstName,
+      lastName: enteredLastName,
+      email: enteredEmail,
+      phone: enteredPhone,
+      address: enteredAddress,
+      positionTitle : enteredPositionTitle,
+      companyName : enteredCompanyName, 
+      startDateWork : enteredStartDate,
+      endDateWork : enteredEndDate,
+      workSummary : enteredWorkSummary,
+      schoolName : enteredSchool,
+      schoolLocation : enteredSchoolLocation,
+      startDateSch : enteredStartDateSchool,
+      endDateSch : enteredEndDateSchool,
+      degree : enteredDegree,
+      skill : enteredSkill,
+      summary : enteredSummary,
+  });
+}
+};
+
+const generatePDF = () => {
+  const resumeContent = document.getElementById('resume-content');
+
+  const pdfOptions = {
+    margin: 10,
+    filename: 'your_resume.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2 },
+    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
   };
+
+  html2pdf().from(resumeContent).set(pdfOptions).outputPdf();
+};
+
 
     return (
       <div>
@@ -215,11 +265,35 @@ import { useNavigate } from 'react-router';
             <input type="text" name="summary" value={enteredSummary} onChange={textChangeHandler} />
           </label>
           <br />
-          <button type="submit">Generate Resume</button>
-        </form>
-        {submittedText && (<p>You just typed: {submittedText}</p>)}
-      </div>
-    );
-  }
+          <button type="button" onClick={() => setIsSubmitted("Submit clicked")}>
+          Submit
+        </button>
+      </form>
+      {isSubmitted && (
+        <div id="resume-content">
+          <ResumePDF formData={{
+            firstName: enteredFirstName,
+            lastName: enteredLastName,
+            email: enteredEmail,
+            phone: enteredPhone,
+            address: enteredAddress,
+            positionTitle: enteredPositionTitle,
+            companyName: enteredCompanyName,
+            startDateWork: enteredStartDate,
+            endDateWork: enteredEndDate,
+            workSummary: enteredWorkSummary,
+            schoolName: enteredSchool,
+            schoolLocation: enteredSchoolLocation,
+            startDateSch: enteredStartDateSchool,
+            endDateSch: enteredEndDateSchool,
+            degree: enteredDegree,
+            skill: enteredSkill,
+            summary: enteredSummary,
+          }} />
+        </div>
+      )}
+    </div>
+  );
+}
 
-  export default ResumeForm;
+export default ResumeForm;
