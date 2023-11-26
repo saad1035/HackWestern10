@@ -24,7 +24,7 @@ const HomePage = () => {
         
   
         {/* Main Content Area */}
-        <div>
+        <div class = "intro">
           <h1 className = "title">Resumade Easy</h1>
           <p className = "body-text">
           Welcome to Resumade Easy, where crafting the perfect resume is as effortless as a stroll in the park. 
