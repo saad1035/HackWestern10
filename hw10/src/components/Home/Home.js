@@ -48,7 +48,7 @@ const HomePage = () => {
           </div>
 
           <div class = " challenges">
-            <p class = "title">Challenges we faces</p>
+            <p class = "title">Challenges we face</p>
             <p>-Learning react with vscode and how to implement different APIs</p>
             <p>-Making a resume form which would save the information</p>
             <p>-Minimize code conflicts and assigning tasks that would be feasible for everyone</p>
