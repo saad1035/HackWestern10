@@ -23,10 +23,7 @@ export const Navbar = () => {
           <NavLink to="/contact">Contact</NavLink>
         </li>
         <li>
-          <NavLink to="/register">Register</NavLink>
-        </li>
-        <li>
-        <NavLink to="/createresume" className="create-resume-btn">Create Resume</NavLink>
+        <NavLink to="/ResumeForm" className="create-resume-btn">Create Resume</NavLink>
         </li>
       </ul>
     </nav>
