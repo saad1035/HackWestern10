@@ -1,8 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import ResumeForm from './components/ResumeForm/ResumeForm';
 import Home from './components/Home/Home';
 import Contact from './components/Contact/Contact';
+import Createresume from './components/Createresume/Createresume';
+import NavBar from './components/NavBar/NavBar';
 
 import {
   BrowserRouter as Router,
@@ -15,10 +16,12 @@ function App() {
   return (
     <div className="App">
       <Router>
+      <NavBar/>
         <Routes>
-          <Route exact path = "/" element = {<Home/>} />
-          <Route exact path = "/resumeform" element = {<ResumeForm />}/>
-          <Route exact path = "/contact" element = {<Contact/>}/>
+          <Route path="/home" element={<Home />} />
+          <Route path="/resumeform" element={<ResumeForm />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Navigate to="/home" />} />
         </Routes>
       </Router>
     </div>
